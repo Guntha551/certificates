@@ -1,0 +1,7 @@
+*.pfx
+*.p12
+*.pem
+*.key
+*.cer
+*.jks
+pem_*/
