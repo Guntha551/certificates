@@ -12,6 +12,8 @@ All scripts prompt for passwords (never on the command line) and need `openssl`;
 | `extract_pfx.sh <file.pfx> [dir]` | Full clean PEM set for OCI LB upload (also PKCS#8 key, fullchain, DER `.cer`) with validation |
 | `oci_lb_update_cert.sh --lb-id <OCID> --listener <name> --cert-dir <dir> [--apply] [--delete-old]` | Rotate the cert on an OCI LB listener (dry run by default) |
 
+Full execution guide: [HOW_TO_EXECUTE.md](HOW_TO_EXECUTE.md)
+
 Typical flow: `change_pfx_password.sh` -> `compare_pfx.sh` -> `extract_pfx.sh` -> `oci_lb_update_cert.sh`.
 
 **Never commit `.pfx`, `.pem`, `.key` files.** See `.gitignore`.
